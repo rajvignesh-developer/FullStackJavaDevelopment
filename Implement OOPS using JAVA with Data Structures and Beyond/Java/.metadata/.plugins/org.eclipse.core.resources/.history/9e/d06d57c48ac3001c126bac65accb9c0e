@@ -1,0 +1,16 @@
+package basics;
+
+public class MethodsExample {
+
+	static void myMethod() {
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		myMethod();
+		
+	}
+
+}
