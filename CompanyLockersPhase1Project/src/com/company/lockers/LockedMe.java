@@ -37,10 +37,9 @@ public class LockedMe
 				break;
 			
 			}
-			//obj.next();
 		}
 		while(ch>0);
-		
+		obj.close();
 	}
  	
 	public static void displaymenu()
@@ -76,13 +75,13 @@ public class LockedMe
 	
 	public static void addanewfile()
 	{
+		Scanner obj = new Scanner(System.in);
 		try
 		{
-			Scanner obj = new Scanner(System.in);
 			String filename;
 			int  linecount;
 		
-			System.out.println("Ener the File Name:");
+			System.out.println("Enter the File Name:");
 			filename=obj.nextLine();
 		
 			System.out.println("Number of Lines to Add:");
@@ -98,15 +97,12 @@ public class LockedMe
 			}
 			System.out.println("File Created Sucessfully.");
 			fw.close();
-			obj.close();
 		}
-		
 		catch(Exception ex)
 		{
-			System.out.println("Invalid Entry.");
-			
+			System.out.println("Invalid Entry.");			
 		}
-				
+		obj.close();	
 	}
 	
 	public static void deleteafile()
@@ -117,7 +113,7 @@ public class LockedMe
 		{
 			String fileName;
 		
-			System.out.println("Ener the File Name to Delete:");
+			System.out.println("Enter the File Name to Delete:");
 			fileName=obj.nextLine();
 			
 			File f1 = new File(projectPath+"\\"+fileName);
@@ -163,7 +159,7 @@ public class LockedMe
 			
 			String fileName;
 			
-			System.out.println("Ener the File Name to Delete:");
+			System.out.println("Enter the File Name to Search:");
 			fileName=obj.nextLine();
 			
 			File f1 = new File(projectPath+"\\"+fileName);
