@@ -8,20 +8,21 @@ import java.util.Scanner;
 public class LockedMe 
 {
 	
-	static final String projectPath="D:\\FullStackJavaDevelopment\\Implement OOPS using JAVA with Data Structures and Beyond\\JavaFullStackDevlopment\\src\\basics";
+	static final String projectPath="D:\\FullStackJavaDevelopment\\CompanyLockersPhase1Project\\Files";
 
  	public static void main(String[] args) 
    {
 		// TODO Auto-generated method stub
 		Scanner obj = new Scanner(System.in);
 		int ch;
+		
 		do 
 		{
-			displaymenu();
+			displayMenu();
 			System.out.println("Enter your option:");
 			ch=Integer.parseInt(obj.nextLine());
 			
-			switch (ch) 
+			switch(ch) 
 			{
 			case 1:displayallfiles();
 				break;
@@ -33,16 +34,15 @@ public class LockedMe
 				break;
 			case 5:System.exit(0);
 				break;
-			default :System.out.println("Invalir Option");
-				break;
-			
+			default :System.out.println("Invalid Option");
+				break;			
 			}
-		}
+			//obj.next();
+		 }
 		while(ch>0);
-		obj.close();
 	}
  	
-	public static void displaymenu()
+	public static void displayMenu()
 	{
 		System.out.println("****************************************************");
 		System.out.println("Welcome to Company Locker  pvt Ltd. - LockedMe.com");
@@ -102,7 +102,7 @@ public class LockedMe
 		{
 			System.out.println("Invalid Entry.");			
 		}
-		obj.close();	
+		//obj.close();	
 	}
 	
 	public static void deleteafile()
@@ -132,7 +132,7 @@ public class LockedMe
 		{
 			System.out.println("Invalid Entry.");
 		}
-		obj.close();
+		//obj.close();
 	}
 	
 	public static void searchafile()
@@ -178,6 +178,6 @@ public class LockedMe
 		{
 			System.out.println("Invalid Entry.");
 		}
-		obj.close();
+		//obj.close();
      }
 }
