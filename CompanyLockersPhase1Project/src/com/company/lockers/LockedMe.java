@@ -153,7 +153,7 @@ public class LockedMe
 				fileNames.add(l.getName());
 			}
 			if(fileNames.contains(fileName))
-				System.out.println("File Is Avaliable.");			
+				System.out.println("File Is Available.");			
 			else
 				System.out.println("File is Not Available.");*/
 			
